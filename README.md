@@ -25,16 +25,9 @@ Using docker-compose:
 * After build local image edit docker-compose.yml and change image name to match your builded image
 * Create logs folder to get logs from squid on host
 
-  mkdir logs
+  mkdir log
 
 * Lauch container
 
-  docker-compose up
-
-
-
-
-
-docker build --tag=soephub/squid .
-docker push soephub/squid:latest
+  docker-compose up -d
 
