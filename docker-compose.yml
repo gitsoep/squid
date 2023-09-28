@@ -1,0 +1,14 @@
+version: '3'
+services:
+  squid:
+    build: .
+    image: soephub/squid:latest
+    container_name: squid
+    restart: unless-stopped
+    volumes:
+      - ./log:/var/log/squid
+      - ./config:/etc/squid
+    ports:
+      - "3128:3128"
+    restart: always
+      
